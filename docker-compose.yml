@@ -1,0 +1,12 @@
+services:
+  deplyn-database:
+    container_name: deplyn-database
+    image: postgres
+    hostname: postgres
+    environment:
+      POSTGRES_PASSWORD: postgres
+      DEPLYN_DB_USER: deplyn
+      DEPLYN_DB_PASSWORD: deplynpwd
+      POSTGRES_DB: deplyn_database
+    ports:
+      - 3307:5432
